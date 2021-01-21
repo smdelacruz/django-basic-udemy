@@ -1,0 +1,28 @@
+{% load static %} <!-- staticfiles on the tutorial-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}"/>
+</head>
+<body>
+<p>Header here</p>
+<hr/>
+{% include "polls/header.html" %}
+<main class="container">
+  <div class="starter-template text-center py-5 px-3">
+    {% block main_content %}
+    {% endblock %}
+    {% include "polls/footer.html" %}
+  </div>
+</main>
+
+</body>
+</html>
